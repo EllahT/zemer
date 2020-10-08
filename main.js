@@ -57,7 +57,7 @@ const villagesConfig = [
 const sickPeopleByVillage = {};
 const thresholdsConfig = {
   red: { color: "#f00f0f", min: 25, max: 100, label: "אדום" },
-  orange: { color: "#f67c09", min: 10, max: 20, label: "אדום" },
+  orange: { color: "#f67c09", min: 10, max: 20, label: "כתום" },
   green: { color: "#12f321", min: 0, max: 10, label: "ירוק" },
 };
 
@@ -194,6 +194,7 @@ function downloadColoredMap() {
   const svgUrl = URL.createObjectURL(svgBlob);
   const svgImage = document.createElement("img");
   document.body.appendChild(svgImage);
+
   svgImage.onload = function () {
     const canvas = document.createElement("canvas");
     canvas.width = svgImage.clientWidth;
